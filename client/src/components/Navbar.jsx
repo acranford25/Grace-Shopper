@@ -3,6 +3,7 @@ import { logout } from "../api/auth";
 import useAuth from "../hooks/useAuth";
 import useCart from "../hooks/useCart";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const nav = useNavigate();
@@ -37,68 +38,46 @@ export default function Navbar() {
 
   return (
     <div id="navbar" className="navbar">
-      <h1 className="nav-header">A More Comfortable Area</h1>
-      <div>
-        <ul className="navlinks">
+      <h1 className="nav-header">Vintage Modern Music</h1>
+      <div className="navlinks">
+        <Link to="/" className="link">
+          Home
+        </Link>
+        {user.isGuest ? (
+          <Link to="/login" className="link">
+            Login/Register
+          </Link>
+        ) : (
           <li>
-            <button className="link" onClick={() => nav("/")}>
-              Home
+            <button className="link" onClick={handleLogout}>
+              Logout
             </button>
           </li>
-          {user.isGuest ? (
-            <li>
-              <button className="link" onClick={() => nav("/login")}>
-                Login/Register
-              </button>
-            </li>
-          ) : (
-            <li>
-              <button className="link" onClick={handleLogout}>
-                Logout
-              </button>
-            </li>
-          )}
-          {user.isAdmin ? (
-            <>
-              <li>
-                <button
-                  className="link"
-                  onClick={() => nav("/dashboard/profile")}
-                >
-                  Profile
-                </button>
-              </li>
-              <li>
-                <button className="link" onClick={() => nav("/dashboard")}>
-                  Dashboard
-                </button>
-              </li>
-            </>
-          ) : (
-            <li>
-              <button
-                className="link"
-                onClick={() => nav("/dashboard/profile")}
-              >
-                Profile
-              </button>
-            </li>
-          )}
-          <li>
-            <button className="shop-navlinks" onClick={() => nav("/shop")}>
-              Shop
-            </button>
-          </li>
-          <li>
-            <button className="navlinks" onClick={() => nav("/cart")}>
-              <p className="counter">{count}</p>
-              <img
-                src="https://em-content.zobj.net/source/microsoft-teams/363/shopping-cart_1f6d2.png"
-                style={{ width: "30px", height: "40px" }}
-              />
-            </button>
-          </li>
-        </ul>
+        )}
+        {user.isAdmin ? (
+          <>
+            <Link to="/dashboard/profile" className="link">
+              Profile
+            </Link>
+            <Link to="/dashboard" className="link">
+              Dashboard
+            </Link>
+          </>
+        ) : (
+          <Link to="/dashboard/profile" className="link">
+            Profile
+          </Link>
+        )}
+        <Link to="/shop" className="shop-navlinks">
+          Shop
+        </Link>
+        <Link to="/cart" className="navlinks">
+          <p className="counter">{count}</p>
+          <img
+            src="https://em-content.zobj.net/source/microsoft-teams/363/shopping-cart_1f6d2.png"
+            style={{ width: "30px", height: "40px" }}
+          />
+        </Link>
       </div>
     </div>
   );
