@@ -1,11 +1,15 @@
+@import url(https://fonts.googleapis.com/css?family=Satisfy);
+@import url(https://fonts.googleapis.com/css?family=Six+Caps);
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif, Poppins, Fira_Sans, Lobster;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif, Poppins,
+    Fira_Sans, Lobster;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: dark;
-  color:  #222823;
-  background-color: #F4F7F5;
+  color: #222823;
+  background-color: #f4f7f5;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,11 +19,12 @@
 }
 a {
   font-weight: 500;
-  color: #1691ca;
+  color: white;
   text-decoration: inherit;
 }
 a:hover {
-  color: #1691ca;
+  color: ghostwhite;
+  text-decoration: underline;
 }
 
 button {
@@ -30,15 +35,15 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #a2cde1;
-  color:  #222823;
+  background-color: #121212;
+  color: white;
   cursor: pointer;
   transition: border-color 0.5s;
 }
 button:hover {
-  border-color: #F4F7F5;
+  border-color: #f4f7f5;
 }
 button:focus,
 button:focus-visible {
-  outline: 1px solid  #F4F7F5;
+  outline: 1px solid #f4f7f5;
 }

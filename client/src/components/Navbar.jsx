@@ -38,7 +38,8 @@ export default function Navbar() {
 
   return (
     <div id="navbar" className="navbar">
-      <h1 className="nav-header">Vintage Modern Music</h1>
+      <h2 id="nav-header">Vintage Modern Music</h2>
+
       <div className="navlinks">
         <Link to="/" className="link">
           Home
@@ -72,7 +73,7 @@ export default function Navbar() {
           Shop
         </Link>
         <Link to="/cart" className="navlinks">
-          <p className="counter">{count}</p>
+          <p id="counter">{count}</p>
           <img
             src="https://em-content.zobj.net/source/microsoft-teams/363/shopping-cart_1f6d2.png"
             style={{ width: "30px", height: "40px" }}

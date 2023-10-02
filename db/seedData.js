@@ -12,128 +12,168 @@ const users = [
 
 const items = [
   {
-    itemName: "bunny plush",
+    itemName: "Partscaster",
     isAvailable: true,
-    itemCost: "15",
-    itemDescription: "a soft bunny friend.",
-    itemCategory: "Plush",
-    inventory_qty: 50,
-  },
-  {
-    itemName: "stich plush",
-    isAvailable: true,
-    itemCost: "20",
+    itemCost: "800",
     itemDescription:
-      "a plush of your favorite blue trouble maker.Disney please don't sue.",
-    itemCategory: "Plush",
-    inventory_qty: 50,
+      "A partscaster with a fender baja neck, hot rails pickups, and a bigsby installed",
+    itemCategory: "Guitars",
+    inventory_qty: 1,
   },
   {
-    itemName: "cat eared cat bed",
+    itemName: "Harmony H78",
     isAvailable: true,
-    itemCost: "50",
-    itemDescription: "keeps your little guy cozy; in style.",
-    itemCategory: "Pets",
-    inventory_qty: 50,
+    itemCost: "1500",
+    itemDescription: "A vintage 1960's Harmny H78 hollowbody guitar",
+    itemCategory: "Guitars",
+    inventory_qty: 1,
   },
   {
-    itemName: "thicksole slippers",
+    itemName: "Fender MusicMaster Bass Amp",
     isAvailable: true,
-    itemCost: "20",
-    itemDescription: "soft an dcomfortable.best to wear on a staycation.",
-    itemCategory: "Shoes",
-    inventory_qty: 50,
-  },
-  {
-    itemName: "toe aid",
-    isAvailable: true,
-    itemCost: "10",
+    itemCost: "200",
     itemDescription:
-      "ever stubbed your toe and now you fell like its a bit off? this will help straighten and support your big toe",
-    itemCategory: "Accessories",
-    inventory_qty: 50,
+      "A vintage Fender MusicMaster Bass Amp that has be reveared by guitar players.",
+    itemCategory: "Amps",
+    inventory_qty: 1,
   },
   {
-    itemName: "green leaf blanket",
+    itemName: "Kalamazoo Model 1",
     isAvailable: true,
-    itemCost: "35",
+    itemCost: "400",
+    itemDescription: "A vintage Kalamazoo Model 1 Amp. 5 watts.",
+    itemCategory: "Amps",
+    inventory_qty: 1,
+  },
+  {
+    itemName: "Big Muff Pi",
+    isAvailable: true,
+    itemCost: "500",
+    itemDescription: 'Vintage Green "Russian" Big Muff.',
+    itemCategory: "Pedals",
+    inventory_qty: 1,
+  },
+  {
+    itemName: "London Fuzz",
+    isAvailable: true,
+    itemCost: "500",
     itemDescription:
-      "from Gloriosum, this will be a perfect blanket for a chill night watching netflix",
-    itemCategory: "Bedding",
-    inventory_qty: 50,
+      "Limited Edition London Fuzz. Made with the rara NKT275 transistors.",
+    itemCategory: "Pedals",
+    inventory_qty: 1,
   },
   {
-    itemName: "soft cat bed",
+    itemName: "Universal Audio Solo/610",
     isAvailable: true,
-    itemCost: "50",
-    itemDescription: "a soft bed for your soft ,sometimes hostile, buddy",
-    itemCategory: "Pets",
-    inventory_qty: 50,
-  },
-  {
-    itemName: "tarot card blanket",
-    isAvailable: true,
-    itemCost: "35",
+    itemCost: "900",
     itemDescription:
-      "a blanket that can also tell your future. its a comfortable one",
-    itemCategory: "Bedding",
-    inventory_qty: 50,
+      "Vintage style tube mic preamp based off the original 610 console preamps",
+    itemCategory: "Misc",
+    inventory_qty: 1,
   },
   {
-    itemName: "cosmic psyonic toad in tub, No.5",
+    itemName: "Nord Stage 6",
     isAvailable: true,
-    itemCost: "40",
-    itemDescription:
-      "omniptent being under the stress of the bad vibes of the cosmos.help him out by getting yourself confy with this blanket or another of our great products!",
-    itemCategory: "Accessories",
-    inventory_qty: 50,
+    itemCost: "1000",
+    itemDescription: "The Nord Stage 6. In excellent condition",
+    itemCategory: "Misc",
+    inventory_qty: 1,
   },
 ];
 
 const images = [
   {
-    image: `https://ae04.alicdn.com/kf/A45e9bd04092843b0a1ce753773ed93c3X.jpg_300x300Q70.jpg_.webp`,
+    image: `https://res.cloudinary.com/doh7njipk/image/upload/v1696104286/guitars/telecaster1_ovuyb1.jpg`,
     itemId: 1,
   },
   {
-    image: `https://ae04.alicdn.com/kf/S40de9cb42b3149808e6c4a5ff8a26afdQ.jpg_300x300Q70.jpg_.webp`,
+    image: `https://res.cloudinary.com/doh7njipk/image/upload/v1696104289/guitars/telecaster3_o7cm5g.jpg`,
+    itemId: 1,
+  },
+  {
+    image: `https://res.cloudinary.com/doh7njipk/image/upload/v1696104286/guitars/telecaster1_ovuyb1.jpg`,
+    itemId: 1,
+  },
+
+  {
+    image: `https://res.cloudinary.com/doh7njipk/image/upload/v1696104182/guitars/harmony1_znib5t.jpg`,
     itemId: 2,
   },
   {
-    image: `https://ae04.alicdn.com/kf/H4d2503139a9d4095984b50bfb05d890e2.jpg_300x300Q70.jpg_.webp`,
+    image: `https://res.cloudinary.com/doh7njipk/image/upload/v1696104184/guitars/harmony3_ek9dlr.jpg`,
+    itemId: 2,
+  },
+  {
+    image: `https://res.cloudinary.com/doh7njipk/image/upload/v1696104183/guitars/harmony2_jk9tox.jpg`,
+    itemId: 2,
+  },
+  {
+    image: `https://res.cloudinary.com/doh7njipk/image/upload/v1696104005/amps/fender_amp2_zcn5gp.jpg`,
     itemId: 3,
   },
   {
-    image: `https://ae04.alicdn.com/kf/Hf150b511be7c4f91841e7439c9c5d3dbj.jpg_300x300Q70.jpg_.webp`,
+    image: `https://res.cloudinary.com/doh7njipk/image/upload/c_thumb,w_200,g_face/v1696104007/amps/fender_amp1_ssklfb.jpg`,
+    itemId: 3,
+  },
+  {
+    image: `https://res.cloudinary.com/doh7njipk/image/upload/v1696104009/amps/fender_amp4_b40odc.jpg`,
+    itemId: 3,
+  },
+  {
+    image: `https://res.cloudinary.com/doh7njipk/image/upload/v1696104724/amps/kalamazoo1_m2vgik.jpg`,
     itemId: 4,
   },
   {
-    image: `https://ae04.alicdn.com/kf/Hfedd9409aa4742d79fe6b4812259f17fA.jpg_300x300Q70.jpg_.webp`,
+    image: `https://res.cloudinary.com/doh7njipk/image/upload/v1696104726/amps/kalamazoo2_pzlgtp.jpg`,
+    itemId: 4,
+  },
+  {
+    image: `https://res.cloudinary.com/doh7njipk/image/upload/v1696103903/pedals/bigmuff1_vvf8mo.jpg`,
     itemId: 5,
   },
   {
-    image: `https://ae01.alicdn.com/kf/S5fc77ad9383d4e33a52cf7a0a4732885t.jpg?width=650&height=1000&hash=1600`,
+    image: `https://res.cloudinary.com/doh7njipk/image/upload/v1696103912/pedals/bigmuff2_fiyxap.jpg`,
+    itemId: 5,
+  },
+  {
+    image: `https://res.cloudinary.com/doh7njipk/image/upload/v1696103930/pedals/bigmuff3_i8regt.jpg`,
+    itemId: 5,
+  },
+  {
+    image: `https://res.cloudinary.com/doh7njipk/image/upload/v1696104051/pedals/londonfuzz1_oalcxh.jpg`,
     itemId: 6,
   },
   {
-    image: `https://ae03.alicdn.com/kf/Hfa6efea37e7d426ca6212bf95e609a38Z.jpeg`,
+    image: `https://res.cloudinary.com/doh7njipk/image/upload/v1696104052/pedals/londonfuzz2_rxrrjq.jpg`,
+    itemId: 6,
+  },
+  {
+    image: `https://res.cloudinary.com/doh7njipk/image/upload/v1696104053/pedals/londonfuzz3_tr5si9.jpg`,
+    itemId: 6,
+  },
+  {
+    image: `https://res.cloudinary.com/doh7njipk/image/upload/v1696104693/misc/ua610_1_uan4op.jpg`,
     itemId: 7,
   },
   {
-    image: `https://ae01.alicdn.com/kf/S112a6db681694754b082a59f8fdf1e11Z.jpg?width=800&height=800&hash=2000`,
+    image: `https://res.cloudinary.com/doh7njipk/image/upload/v1696104692/misc/ua610_3_ficw5r.jpg`,
+    itemId: 7,
+  },
+  {
+    image: `https://res.cloudinary.com/doh7njipk/image/upload/v1696104694/misc/us620_2_ysfof4.jpg`,
+    itemId: 7,
+  },
+  {
+    image: `https://res.cloudinary.com/doh7njipk/image/upload/v1696104406/misc/nord3_b8ada6.jpg`,
     itemId: 8,
   },
   {
-    image: `https://ae01.alicdn.com/kf/S874e7edface74419b2e51d3b3cd8b67cZ.jpg?width=1600&height=1600&hash=3200`,
-    itemId: 9,
+    image: `https://res.cloudinary.com/doh7njipk/image/upload/v1696104404/misc/nord2_fppmk9.jpg`,
+    itemId: 8,
   },
   {
-    image: `https://i.ebayimg.com/images/g/Zw4AAOSwDjZg3MDK/s-l1200.webp`,
-    itemId: 2,
-  },
-  {
-    image: `https://www.picclickimg.com/GL4AAOSwfgtkZj47/DISNEY-PARKS-Lilo-Stitch-Snuggle-Snappers-Hugger.webp`,
-    itemId: 2,
+    image: `https://res.cloudinary.com/doh7njipk/image/upload/v1696104402/misc/nord1_drrabn.jpg`,
+    itemId: 8,
   },
 ];
 

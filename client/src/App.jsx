@@ -1,10 +1,7 @@
 import { Route, Routes } from "react-router-dom";
-
 import Navbar from "./components/Navbar";
-
 import Home from "./components/Home";
 import Footer from "./components/Footer";
-
 import Profile from "./components/Profile";
 import Shop from "./components/Shop/Shop";
 import Cart from "./components/Cart/Cart";
@@ -15,19 +12,15 @@ import Settings from "./ProfileLinks/Settings";
 import OrderHistory from "./ProfileLinks/OrderHistory";
 import Checkout from "./components/Checkout";
 import Billing from "./components/Billing";
-import Items from "./components/Shop/Items";
 import SingleItem from "./components/Shop/SingleItem";
-
-import ItemPage from "./components/ItemPage";
 import "./App.css";
-
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import useAuth from "./hooks/useAuth";
 import CategoryItems from "./components/Shop/CategoryItems";
 import ConfirmationPage from "./components/ConfirmationPage";
 import ErrorPage from "./components/Error";
-import CheckoutForm from "./components/CheckoutForm";
 import { motion as m } from "framer-motion";
+
 function App() {
   const { user } = useAuth();
   const [err, setErr] = useState(null);

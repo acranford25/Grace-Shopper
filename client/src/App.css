@@ -1,3 +1,7 @@
+@import url(https://fonts.googleapis.com/css?family=Satisfy);
+@import url(https://fonts.googleapis.com/css?family=Six+Caps);
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+
 * {
   margin: 0;
   padding: 0;
@@ -14,28 +18,90 @@ html {
 
 .navbar {
   display: flex;
-  background-color: #a2cde1;
+  background-color: #182335;
   padding: 1rem;
   position: sticky;
   top: 0;
   justify-content: space-between;
-  
+
   box-shadow: 1px 1px 1px 1px;
   border-radius: 6px;
   z-index: 1;
   margin-bottom: 1rem;
   font-style: italic;
 }
-.nav-header{
-  margin: 12px
+#nav-header {
+  font-family: "Six Caps", sans-serif;
+  font-size: 3em;
+  color: white;
+  margin: 12px;
 }
+
+[class*="fontawesome-"]:before {
+  font-family: "FontAwesome", sans-serif;
+}
+
+body {
+  background: whitesmoke;
+
+  color: #121212;
+}
+
+section.text {
+  width: 100%;
+  min-width: 800px;
+  text-align: center;
+  padding-top: 50px;
+}
+
+h1 {
+  font-family: "Six Caps", Sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 40em;
+  text-shadow: 1px 2px #eae4cc, 1px 2px #e15546;
+}
+
+h1 span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+h3 {
+  font-family: "Open Sans", Sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+h3:before,
+h3:after {
+  content: " ";
+  position: absolute;
+  width: 100px;
+  height: 6px;
+  border-top: 2px solid #121212;
+  border-bottom: 2px solid #121212;
+}
+
+h3:before {
+  margin: 5px 0 0 -110px;
+}
+
+h3:after {
+  margin: 5px 0 0 10px;
+}
+
 .navlinks {
   display: flex;
   list-style: none;
   align-items: center;
   font-size: 1.25rem;
 }
-.shop-navlinks{
+.shop-navlinks {
   margin-right: 0;
 }
 .home-page {
@@ -63,7 +129,7 @@ html {
   padding: 1rem;
   position: sticky;
   bottom: 0;
-  background-color: #a2cde1;
+  background-color: #121212;
   justify-content: center;
   box-shadow: 1px 1px 1px 2px;
   border-radius: 6px;
@@ -201,7 +267,6 @@ html {
   text-align: center;
 }
 
-
 .reviews {
   margin: auto;
   min-width: 68vw;
@@ -289,7 +354,7 @@ html {
   align-items: center;
   text-align: center;
   padding: 3rem;
-  border: 4px solid rgb(181, 59, 14);
+  border: 4px solid #e15546;
   border-radius: 20px;
   margin: 2rem;
   color: #222823;
@@ -313,6 +378,7 @@ html {
 
 .cart {
   min-height: 99vh;
+  text-decoration: none;
 }
 
 .popup-container {
@@ -359,23 +425,24 @@ html {
   padding: 1rem;
   list-style: none;
 }
-.counter {
+#counter {
   position: relative;
   /* justify-content: center;
   align-items: center; */
   /* top: 2.5rem; */
   /* right: .75rem; */
-  left: .75rem;
+  left: 0.75rem;
   width: 20px;
   height: 20px;
   font-size: small;
   border-radius: 50%;
   background: fixed;
   z-index: 2;
-  opacity: 0.7;
+  opacity: 98%;
   background-color: red;
   color: white;
   background-size: contain;
+  text-decoration: none;
 }
 .confirmation {
   min-height: 99vh;
@@ -441,28 +508,28 @@ html {
 #navbar {
   position: sticky;
 }
-@media (max-width: 930px){
-  .userInfo{
+@media (max-width: 930px) {
+  .userInfo {
     float: none;
     padding: 2rem;
-    width: 80vw
+    width: 80vw;
   }
-  .itemsULike{
+  .itemsULike {
     margin-top: 2rem;
     width: 80vw;
   }
-  .buy-again{
+  .buy-again {
     margin-top: 2rem;
     width: 80vw;
   }
-  .navbar{
+  .navbar {
     font-size: 24px;
     text-align: center;
   }
-  .nav-header{
+  .nav-header {
     text-align: center;
   }
-  .navlinks{
+  .navlinks {
     font-size: 16px;
     padding: 0;
     margin: 0;
