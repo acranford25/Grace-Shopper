@@ -83,6 +83,10 @@ const items = [
 
 const images = [
   {
+    image: `https://res.cloudinary.com/doh7njipk/image/upload/c_thumb,w_200,g_face/v1696104286/guitars/telecaster1_ovuyb1.jpg`,
+    itemId: 1,
+  },
+  {
     image: `https://res.cloudinary.com/doh7njipk/image/upload/v1696104286/guitars/telecaster1_ovuyb1.jpg`,
     itemId: 1,
   },
@@ -93,6 +97,11 @@ const images = [
   {
     image: `https://res.cloudinary.com/doh7njipk/image/upload/v1696104286/guitars/telecaster1_ovuyb1.jpg`,
     itemId: 1,
+  },
+  /////////////////
+  {
+    image: `https://res.cloudinary.com/doh7njipk/image/upload/c_thumb,w_200,g_face/v1696104182/guitars/harmony1_znib5t.jpg`,
+    itemId: 2,
   },
 
   {
@@ -107,6 +116,11 @@ const images = [
     image: `https://res.cloudinary.com/doh7njipk/image/upload/v1696104183/guitars/harmony2_jk9tox.jpg`,
     itemId: 2,
   },
+  ///////////////////
+  {
+    image: `https://res.cloudinary.com/doh7njipk/image/upload/c_thumb,w_200,g_face/v1696104005/amps/fender_amp2_zcn5gp.jpg`,
+    itemId: 3,
+  },
   {
     image: `https://res.cloudinary.com/doh7njipk/image/upload/v1696104005/amps/fender_amp2_zcn5gp.jpg`,
     itemId: 3,
@@ -119,6 +133,11 @@ const images = [
     image: `https://res.cloudinary.com/doh7njipk/image/upload/v1696104009/amps/fender_amp4_b40odc.jpg`,
     itemId: 3,
   },
+  ///////////////////
+  {
+    image: `https://res.cloudinary.com/doh7njipk/image/upload/c_thumb,w_200,g_face/v1696104724/amps/kalamazoo1_m2vgik.jpg`,
+    itemId: 4,
+  },
   {
     image: `https://res.cloudinary.com/doh7njipk/image/upload/v1696104724/amps/kalamazoo1_m2vgik.jpg`,
     itemId: 4,
@@ -126,6 +145,11 @@ const images = [
   {
     image: `https://res.cloudinary.com/doh7njipk/image/upload/v1696104726/amps/kalamazoo2_pzlgtp.jpg`,
     itemId: 4,
+  },
+  ///////////////////
+  {
+    image: `https://res.cloudinary.com/doh7njipk/image/upload/c_thumb,w_200,g_face/v1696103903/pedals/bigmuff1_vvf8mo.jpg`,
+    itemId: 5,
   },
   {
     image: `https://res.cloudinary.com/doh7njipk/image/upload/v1696103903/pedals/bigmuff1_vvf8mo.jpg`,
@@ -139,6 +163,11 @@ const images = [
     image: `https://res.cloudinary.com/doh7njipk/image/upload/v1696103930/pedals/bigmuff3_i8regt.jpg`,
     itemId: 5,
   },
+  ////////////////////
+  {
+    image: `https://res.cloudinary.com/doh7njipk/image/upload/c_thumb,w_200,g_face/v1696104051/pedals/londonfuzz1_oalcxh.jpg`,
+    itemId: 6,
+  },
   {
     image: `https://res.cloudinary.com/doh7njipk/image/upload/v1696104051/pedals/londonfuzz1_oalcxh.jpg`,
     itemId: 6,
@@ -151,6 +180,11 @@ const images = [
     image: `https://res.cloudinary.com/doh7njipk/image/upload/v1696104053/pedals/londonfuzz3_tr5si9.jpg`,
     itemId: 6,
   },
+  ///////////////////
+  {
+    image: `https://res.cloudinary.com/doh7njipk/image/upload/c_thumb,w_200,g_face/v1696104693/misc/ua610_1_uan4op.jpg`,
+    itemId: 7,
+  },
   {
     image: `https://res.cloudinary.com/doh7njipk/image/upload/v1696104693/misc/ua610_1_uan4op.jpg`,
     itemId: 7,
@@ -162,6 +196,11 @@ const images = [
   {
     image: `https://res.cloudinary.com/doh7njipk/image/upload/v1696104694/misc/us620_2_ysfof4.jpg`,
     itemId: 7,
+  },
+  ///////////////////
+  {
+    image: `https://res.cloudinary.com/doh7njipk/image/upload/c_thumb,w_200,g_face/v1696104406/misc/nord3_b8ada6.jpg`,
+    itemId: 8,
   },
   {
     image: `https://res.cloudinary.com/doh7njipk/image/upload/v1696104406/misc/nord3_b8ada6.jpg`,

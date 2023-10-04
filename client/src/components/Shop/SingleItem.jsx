@@ -26,21 +26,11 @@ export default function SingleItem() {
       async function getItemById() {
         const result = await fetchItem(itemId);
         setItem(result.item);
+        setImage(result.item.images[1].image);
+        console.log(result.item);
         await fetchImg(result.item);
       }
-      //the function that fetches the first image off the image reel
-      async function nextFunc(itm) {
-        return itm.imagereel[0].image;
-      }
-      //fetches image because image needs to be awaited to load with
-      //page, for some reason.
-      //may replace with the imagereel as a whole reel instead.if we have time
-      async function fetchImg(itm) {
-        let img = await nextFunc(itm);
 
-        setImage(img);
-        await fetchReviews(itm);
-      }
       // pulls reviews for item
       async function fetchReviews(itm) {
         let revHtml = await itm.reviewlist.map((review) => {
@@ -92,20 +82,23 @@ export default function SingleItem() {
   }
 
   return (
-    <Container className="mt-4">
-      <Row>
-        <Col md={{ span: 10, offset: 1 }}>
-          <Card className="mt-2">
-            <Card.Body>
-              <h1>{item.name} </h1>
-              <p>Description: {item.description} </p>
+    <div className="container mx-auto px-4">
+      <div className="row">
+        <div className="columns-1 overflow-auto" md={{ span: 10, offset: 1 }}>
+          <div className="card w-96 overflow-auto bg-base-100 shadow-xl">
+            <figure>
+              <img
+                className="object-scale-down h-30 w-50"
+                src={image}
+                alt="imageNotFound"
+              />
+            </figure>
+            <div className="card-body">
+              <h2 className="card-title text-black">{item.name} </h2>
+              <p className="text-black">Description: {item.description} </p>
               <p>Price: ${item.cost} </p>
-              <p>
-                <img src={image} alt="imageNotFound" />
-              </p>
-
               <AddToCart item={item} />
-            </Card.Body>
+            </div>
             <Card.Footer>
               <br></br>
               <div>
@@ -162,9 +155,9 @@ export default function SingleItem() {
                 {reviews}
               </div>
             </Card.Footer>
-          </Card>
-        </Col>
-      </Row>
-    </Container>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }

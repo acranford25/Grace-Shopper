@@ -183,17 +183,8 @@ export default function AddToCart({ item, handleClick, setThisQuantity }) {
       {(pathname === "/shop" || pathname === `/shop/${category}`) && (
         <Container>
           <Row>
-            <Col md={{ span: 10, offset: 1 }}>
-              <form onSubmit={handleSubmit}>
-                <button>Quick Add</button>
-              </form>
-            </Col>
+            <Col md={{ span: 10, offset: 1 }}></Col>
           </Row>
-          <AddSuccessMessage
-            showModal={displayConfirmationModal}
-            hideModal={hideConfirmationModal}
-            item={item}
-          />
         </Container>
       )}
       {pathname === `/shop/items/${itemId}` && (
