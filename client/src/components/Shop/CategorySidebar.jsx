@@ -2,18 +2,17 @@ import { Link } from "react-router-dom";
 
 export default function CategorySidebar() {
   const categories = [
-    { id: 0, name: "Plush" },
-    { id: 1, name: "Pets" },
-    { id: 2, name: "Shoes" },
-    { id: 3, name: "Accessories" },
-    { id: 4, name: "Bedding" },
+    { id: 0, name: "Guitars" },
+    { id: 1, name: "Amps" },
+    { id: 2, name: "Pedals" },
+    { id: 3, name: "Misc." },
   ];
   return (
     <div className="sidebar">
       {categories.map((category) => {
         return (
           <Link
-            className="sidebar-links"
+            className="sidebar-links text-black"
             key={category.id}
             to={`/shop/${category.name}`}
           >
