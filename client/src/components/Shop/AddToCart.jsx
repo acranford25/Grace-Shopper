@@ -180,13 +180,7 @@ export default function AddToCart({ item, handleClick, setThisQuantity }) {
 
   return (
     <div>
-      {(pathname === "/shop" || pathname === `/shop/${category}`) && (
-        <Container>
-          <Row>
-            <Col md={{ span: 10, offset: 1 }}></Col>
-          </Row>
-        </Container>
-      )}
+      {(pathname === "/shop" || pathname === `/shop/${category}`) && <></>}
       {pathname === `/shop/items/${itemId}` && (
         <Container>
           <Row>
