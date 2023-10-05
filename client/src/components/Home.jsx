@@ -26,18 +26,14 @@ export default function Home() {
       </figure>
       <div className="home-description">
         <br></br>
-        {(loggedIn === false || user.isGuest) && (
-          <p>
-            <Link to="/login">
-              {" "}
-              <u>Login</u>
-            </Link>
-            {""} or
-            <Link to="/register">
-              {" "}
-              <u>Register Here</u>
-            </Link>
-          </p>
+        {loggedIn === false || user.isGuest ? (
+          <Link to="/login">
+            <u className="text-black">Login</u>
+          </Link>
+        ) : (
+          <Link to="/register">
+            <u className="text-black">Register Here</u>
+          </Link>
         )}
       </div>
     </m.div>
