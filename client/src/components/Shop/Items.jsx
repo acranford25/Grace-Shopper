@@ -6,26 +6,16 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function Items({ items }) {
   return (
-    <div>
-      <div className="flex flex-col justify-center min-h-screen bg-slate-100 gap-5">
-        <div className="flex flex-col justify-center min-h-screen bg-slate-100 gap-5">
-          <div className="columns-5 container mx-auto px-4">
-            {items.map((item) => {
-              return (
-                <div
-                  key={item.id}
-                  className="card w-92 overflow-auto bg-base-100 shadow-xl"
-                >
-                  <Link key={item.id} to={`/shop/items/${item.id}`}>
-                    <ItemRow key={item.id} item={item} />
-                  </Link>
-                  <AddToCart item={item} />
-                </div>
-              );
-            })}
+    <div className="grid grid-cols-3 gap-4">
+      {items.map((item) => {
+        return (
+          <div key={item.id} className="cards">
+            <Link key={item.id} to={`/shop/items/${item.id}`}>
+              <ItemRow key={item.id} item={item} />
+            </Link>
           </div>
-        </div>
-      </div>
+        );
+      })}
     </div>
   );
 }
