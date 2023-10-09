@@ -19,7 +19,6 @@ export default function SingleItem() {
         setItem(result.item);
         setImage(result.item.images[1].image);
         console.log(result.item);
-        await fetchImg(result.item);
       }
 
       getItemById();

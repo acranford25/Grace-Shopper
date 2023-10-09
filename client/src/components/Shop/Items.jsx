@@ -9,11 +9,11 @@ export default function Items({ items }) {
     <div id="container">
       {items.map((item) => {
         return (
-          <div key={item.id}>
+          <div key={item.id} className="m-4 p-2">
             <img src={item.imagereel[0].image} alt="imageNotFound" />
             <p className="text-black">{item.name}</p>
             <p className="text-black">price: ${item.cost}</p>
-            <button>
+            <button type="button" className="text-white bg-[#E15546]">
               <Link key={item.id} to={`/shop/items/${item.id}`}>
                 Buy Now
               </Link>

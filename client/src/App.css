@@ -12,7 +12,7 @@ html {
   min-height: 100vh;
   text-align: center;
   font-family: "Fira_Sans";
-  color: #222823;
+  /* color: #222823; */
 }
 
 #container {

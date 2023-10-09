@@ -23,8 +23,6 @@ export default function Shop() {
 
   return (
     <div className="container m-auto grid grid-cols-3 gap-4">
-      <h2 className="tile-marker">Shop</h2>
-      <br></br>
       <CategorySidebar />
       <Items items={items} className="m-32" />
     </div>
