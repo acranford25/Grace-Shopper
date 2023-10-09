@@ -22,16 +22,11 @@ export default function Shop() {
   }, []);
 
   return (
-    <m.div
-      id="items-shop"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5, ease: "easeIn" }}
-    >
-      <h2>Shop</h2>
+    <div className="container m-auto grid grid-cols-3 gap-4">
+      <h2 className="tile-marker">Shop</h2>
       <br></br>
       <CategorySidebar />
-      <Items items={items} />
-    </m.div>
+      <Items items={items} className="m-32" />
+    </div>
   );
 }

@@ -8,12 +8,7 @@ import "../App.css";
 export default function Home() {
   const { user, loggedIn } = useAuth();
   return (
-    <m.div
-      className="home-page"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1, ease: "easeIn" }}
-    >
+    <div className="home-page">
       <section class="text">
         <h3></h3>
         <h1>
@@ -36,6 +31,6 @@ export default function Home() {
           </Link>
         )}
       </div>
-    </m.div>
+    </div>
   );
 }
