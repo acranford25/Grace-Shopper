@@ -200,7 +200,9 @@ export default function AddToCart({ item, handleClick, setThisQuantity }) {
                 </label>
 
                 <span>
-                  <button className="addtocart">Add To Cart</button>
+                  <button className="addtocart bg-[#E15546]">
+                    Add To Cart
+                  </button>
                 </span>
               </form>
             </Col>

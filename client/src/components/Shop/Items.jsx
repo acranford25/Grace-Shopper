@@ -6,18 +6,16 @@ import AddToCart from "./AddToCart";
 
 export default function Items({ items }) {
   return (
-    <div id="container">
+    <div className="col-span-3 grid grid-rows-3 grid-flow-col gap-4">
       {items.map((item) => {
         return (
-          <div key={item.id} className="m-4 p-2">
-            <img src={item.imagereel[0].image} alt="imageNotFound" />
-            <p className="text-black">{item.name}</p>
-            <p className="text-black">price: ${item.cost}</p>
-            <button type="button" className="text-white bg-[#E15546]">
-              <Link key={item.id} to={`/shop/items/${item.id}`}>
+          <div key={item.id} className="card m-4 p-2">
+            <ItemRow key={item.id} item={item} />
+            <Link key={item.id} to={`/shop/items/${item.id}`}>
+              <button type="button" className="text-white bg-[#E15546]">
                 Buy Now
-              </Link>
-            </button>
+              </button>
+            </Link>
           </div>
         );
       })}

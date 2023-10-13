@@ -15,6 +15,7 @@
   border: thin solid black;
   border-radius: 15px;
   box-shadow: 3px 4px 6px #999;
+  z-index: 5s;
 }
 
 #success {

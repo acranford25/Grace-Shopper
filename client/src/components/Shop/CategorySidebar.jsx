@@ -8,11 +8,11 @@ export default function CategorySidebar() {
     { id: 3, name: "Misc." },
   ];
   return (
-    <div className="sidebar">
+    <div className="card col-span-1 flex flex-col min-h-fit">
       {categories.map((category) => {
         return (
           <Link
-            className="sidebar-links text-black"
+            className="sidebar-links text-black m-1"
             key={category.id}
             to={`/shop/${category.name}`}
           >

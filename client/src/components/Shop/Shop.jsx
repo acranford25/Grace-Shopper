@@ -22,9 +22,15 @@ export default function Shop() {
   }, []);
 
   return (
-    <div className="container m-auto grid grid-cols-3 gap-4">
+    <m.div
+      className="container grid grid-cols-4 gap-4"
+      id="items-shop"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5, ease: "easeIn" }}
+    >
       <CategorySidebar />
-      <Items items={items} className="m-32" />
-    </div>
+      <Items items={items} />
+    </m.div>
   );
 }
