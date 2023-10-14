@@ -5,25 +5,29 @@ import CategorySidebar from "./CategorySidebar";
 import { motion as m } from "framer-motion";
 ("../../App.css");
 
-export default function Shop() {
+export default function Shop({ categoryItems }) {
   const [items, setItems] = useState([]);
 
   async function getItems() {
-    try {
-      const result = await fetchAllItems();
-      setItems(result.items);
-    } catch (error) {
-      console.error(error);
+    if (categoryItems) {
+      setItems(categoryItems);
+    } else {
+      try {
+        const result = await fetchAllItems();
+        setItems(result.items);
+      } catch (error) {
+        console.error(error);
+      }
     }
   }
 
   useEffect(() => {
     getItems();
-  }, []);
+  }, [categoryItems]);
 
   return (
     <m.div
-      className="tw-container tw-grid tw-grid-cols-4 tw-gap-4"
+      className="tw-container tw-grid tw-grid-cols-4 tw-grid-rows-4 tw-gap-4"
       id="items-shop"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}

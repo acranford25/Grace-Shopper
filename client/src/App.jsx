@@ -20,6 +20,7 @@ import CategoryItems from "./components/Shop/CategoryItems";
 import ConfirmationPage from "./components/ConfirmationPage";
 import ErrorPage from "./components/Error";
 import { motion as m } from "framer-motion";
+import CategorySidebar from "./components/Shop/CategorySidebar";
 
 function App() {
   const { user } = useAuth();

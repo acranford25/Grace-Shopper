@@ -8,8 +8,8 @@ export default function CategorySidebar() {
     { id: 3, name: "Misc." },
   ];
   return (
-    <div className="tw-grid tw-grid-rows-4 tw-justify-center tw-m-4 tw-p-2">
-      <div className="card tw-row-span-1 col-span-1 flex flex-col tw-w-52 tw-justify-evenly">
+    <div className="tw-m-4 tw-p-2">
+      <div className="card tw-bg-[#FBD0A6]  tw-justify-evenly">
         {categories.map((category) => {
           return (
             <Link
