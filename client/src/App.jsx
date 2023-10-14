@@ -26,7 +26,7 @@ function App() {
   const [err, setErr] = useState(null);
 
   return (
-    <m.div className="grid grid-rows-1 min-h-100vh m-0">
+    <m.div className="tw-grid tw-grid-rows-1 tw-min-h-100vh tw-m-0">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

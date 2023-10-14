@@ -102,7 +102,7 @@ h3:after {
   margin: 5px 0 0 10px;
 }
 
-/* .navlinks {
+.navlinks {
   display: flex;
   list-style: none;
   align-items: center;
@@ -110,7 +110,7 @@ h3:after {
 }
 .shop-navlinks {
   margin-right: 0;
-} */
+}
 .home-page {
   min-height: 75vh;
 }

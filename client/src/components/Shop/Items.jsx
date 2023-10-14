@@ -12,7 +12,7 @@ export default function Items({ items }) {
           <div key={item.id} className="card m-4 p-2">
             <ItemRow key={item.id} item={item} />
             <Link key={item.id} to={`/shop/items/${item.id}`}>
-              <button type="button" className="text-white bg-[#E15546]">
+              <button type="button" className="text-white tw-bg-[#E15546]">
                 Buy Now
               </button>
             </Link>

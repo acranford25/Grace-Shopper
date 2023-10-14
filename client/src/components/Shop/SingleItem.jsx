@@ -26,8 +26,8 @@ export default function SingleItem() {
   }, [setItem]);
 
   return (
-    <div className="container  p-4 m-4 min-h-100">
-      <div className="card bg-base-100 shadow-xl flex flex-row">
+    <div className="container  tw-p-4 tw-m-4 tw-min-h-screen">
+      <div className="card tw-bg-base-100 tw-shadow-xl tw-flex tw-flex-row">
         <figure>
           <img
             className="object-scale-down h-30 w-50"
