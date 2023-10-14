@@ -23,7 +23,7 @@ export default function Shop() {
 
   return (
     <m.div
-      className="container grid grid-cols-4 gap-4"
+      className="tw-container tw-grid tw-grid-cols-4 tw-gap-4"
       id="items-shop"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}

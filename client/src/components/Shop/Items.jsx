@@ -6,7 +6,7 @@ import AddToCart from "./AddToCart";
 
 export default function Items({ items }) {
   return (
-    <div className="col-span-3 grid grid-rows-3 grid-flow-col gap-4">
+    <div className="tw-col-span-3 tw-grid tw-grid-rows-3 tw-grid-flow-col tw-gap-4">
       {items.map((item) => {
         return (
           <div key={item.id} className="card m-4 p-2">

@@ -5,6 +5,8 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
     "./src/**/**/*.{js,ts,jsx,tsx}",
   ],
+  prefix: "tw-",
+  important: true,
   theme: {
     extend: {
       gridTemplateColumns: {
@@ -16,6 +18,9 @@ export default {
         },
       },
     },
+  },
+  corePlugins: {
+    preflight: false,
   },
   plugins: [require("daisyui")],
 };
