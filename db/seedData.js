@@ -68,7 +68,7 @@ const items = [
     itemCost: "900",
     itemDescription:
       "Vintage style tube mic preamp based off the original 610 console preamps",
-    itemCategory: "Misc",
+    itemCategory: "Misc.",
     inventory_qty: 1,
   },
   {
@@ -76,7 +76,7 @@ const items = [
     isAvailable: true,
     itemCost: "1000",
     itemDescription: "The Nord Stage 6. In excellent condition",
-    itemCategory: "Misc",
+    itemCategory: "Misc.",
     inventory_qty: 1,
   },
 ];
