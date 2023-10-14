@@ -26,7 +26,6 @@ export default function Cart() {
     async function setCartItems() {
       const result = await fetchMyCart();
       if (result.success) {
-        console.log("result.order:", result.order);
         setCart(result.order);
         return;
       } else {
