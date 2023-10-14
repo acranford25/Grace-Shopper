@@ -80,7 +80,6 @@ export default function AddToCart({ item, handleClick, setThisQuantity }) {
   //////////////////////////////////////////////////////////
   function addNewItems() {
     item.quantity = quantity;
-
     async function addOrderItem() {
       const result = await postOrderItem(cart.id, item.id, item.quantity);
       setIsCounted(!isCounted);
@@ -126,6 +125,7 @@ export default function AddToCart({ item, handleClick, setThisQuantity }) {
 
     if (!cart.id) {
       addNewCart();
+      addNewItems();
       return;
     }
 
@@ -191,7 +191,7 @@ export default function AddToCart({ item, handleClick, setThisQuantity }) {
                   <input
                     type="number"
                     max="100"
-                    min="0"
+                    min="1"
                     value={quantity}
                     onChange={(e) => {
                       setQuantity(Number(e.target.value));
