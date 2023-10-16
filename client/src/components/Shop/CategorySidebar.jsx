@@ -9,18 +9,30 @@ export default function CategorySidebar() {
   ];
   return (
     <div className="tw-m-4 tw-p-2">
-      <div className="card tw-bg-[#FBD0A6]  tw-justify-evenly">
-        {categories.map((category) => {
-          return (
-            <Link
-              className="sidebar-links text-black m-1"
-              key={category.id}
-              to={`/shop/${category.name}`}
-            >
-              {category.name}
-            </Link>
-          );
-        })}
+      <div className="tw-shadow-2xl tw-justify-evenly tw-bg-black tw-pt-6 tw-pl-6 tw-border-t-solid tw-border-t-6 tw-border-black tw-rounded-t-lg tw-rounded-bl-lg">
+        <div className="tw-bg-[#EEAF9D] tw-pt-6 tw-pl-6 tw-border-solid tw-border-t-6 tw-border-r-1 tw-border-b-1 tw-border-black tw-rounded-t-lg tw-rounded-bl-lg">
+          <div className="tw-bg-[#E15546] tw-pt-6 tw-pl-6 tw-border-black tw-border-t-2 tw-border-r-0 tw-border-b-0 tw-border-solid tw-rounded-t-lg tw-rounded-bl-lg tw-shadow-2xl">
+            <div className="tw-flex tw-flex-col tw-bg-[#E7DCC9] tw-justify-evenly tw-py-6 tw-border-t-2 tw-border-r-0 tw-border-b-0 tw-border-solid tw-border-black tw-rounded-t-md tw-rounded-bl-md tw-shadow-xl">
+              <Link
+                className="sidebar-links text-black tw-m-1 tw-py-8"
+                to={`/shop`}
+              >
+                All
+              </Link>
+              {categories.map((category) => {
+                return (
+                  <Link
+                    className="sidebar-links text-black tw-m-1 tw-py-8"
+                    key={category.id}
+                    to={`/shop/${category.name}`}
+                  >
+                    {category.name}
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
