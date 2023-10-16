@@ -3,11 +3,10 @@ import AddToCart from "./AddToCart";
 
 export default function ItemRow({ item }) {
   return (
-    <div>
+    <divs>
       <img src={item.imagereel[0].image} alt="imageNotFound" />
-      <p>{item.name}</p>
-      <p>{item.description}</p>
-      <p>price: ${item.cost}</p>
-    </div>
+      <p className="text-black">{item.name}</p>
+      <h4 className="text-black">${item.cost}</h4>
+    </divs>
   );
 }

@@ -2,23 +2,24 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Items from "./Items";
 import { fetchItemsByCategory } from "../../api/items";
+import Shop from "./Shop";
+("../../App.css");
 export default function CategoryItems() {
   const { category } = useParams();
-  const [items, setItems] = useState([]);
+  const [categoryItems, setCategoryItems] = useState([]);
 
   useEffect(() => {
     async function getItems() {
       const result = await fetchItemsByCategory(category);
 
-      setItems(result);
+      setCategoryItems(result);
     }
     getItems();
-  }, []);
+  }, [category]);
 
   return (
-    <div id="items-shop">
-      <h2>{category}</h2>
-      <Items items={items} />
+    <div>
+      <Shop categoryItems={categoryItems} setCategoryItems={setCategoryItems} />
     </div>
   );
 }

@@ -37,7 +37,11 @@ export default function RemoveCartItems({ item }) {
     <Container className="mt-4">
       <Row>
         <Col md={{ span: 10, offset: 1 }}>
-          <button type="onClick" onClick={() => showDeleteModal("item", item)}>
+          <button
+            className="bg-[#E15546]"
+            type="onClick"
+            onClick={() => showDeleteModal("item", item)}
+          >
             Remove
           </button>
         </Col>

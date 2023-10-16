@@ -1,6 +1,6 @@
 const itemsRouter = require("express").Router();
 
-const { createImage } = require("../db/adapters/assets");
+const { createImage, getImagesByItemId } = require("../db/adapters/assets");
 const {
   getAllItems,
   getItemsByCategory,
@@ -32,6 +32,8 @@ itemsRouter.get("/", async (req, res) => {
 itemsRouter.get("/:itemId", async (req, res) => {
   const { itemId } = req.params;
   const item = await getItemById(itemId);
+  const images = await getImagesByItemId(itemId);
+  item.images = images;
   console.log("item route", item);
   res.send({
     success: true,

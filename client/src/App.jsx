@@ -20,13 +20,14 @@ import CategoryItems from "./components/Shop/CategoryItems";
 import ConfirmationPage from "./components/ConfirmationPage";
 import ErrorPage from "./components/Error";
 import { motion as m } from "framer-motion";
+import CategorySidebar from "./components/Shop/CategorySidebar";
 
 function App() {
   const { user } = useAuth();
   const [err, setErr] = useState(null);
 
   return (
-    <m.div>
+    <m.div className="tw-grid tw-grid-rows-1 tw-min-h-100vh tw-m-0">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

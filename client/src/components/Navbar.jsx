@@ -37,10 +37,10 @@ export default function Navbar() {
   }, [isCounted, cart]);
 
   return (
-    <div id="navbar" className="navbar">
+    <div id="navbar" className="navbar tw-px-8">
       <h2 id="nav-header">Vintage Modern Music</h2>
 
-      <div className="navlinks">
+      <div className="navlinks tw-space-x-4">
         <Link to="/" className="link">
           Home
         </Link>
@@ -55,7 +55,7 @@ export default function Navbar() {
             </button>
           </li>
         )}
-        {user.isAdmin ? (
+        {(user.isAdmin && (
           <>
             <Link to="/dashboard/profile" className="link">
               Profile
@@ -64,11 +64,12 @@ export default function Navbar() {
               Dashboard
             </Link>
           </>
-        ) : (
-          <Link to="/dashboard/profile" className="link">
-            Profile
-          </Link>
-        )}
+        )) ||
+          (!user.isGuest && (
+            <Link to="/dashboard/profile" className="link">
+              Profile
+            </Link>
+          ))}
         <Link to="/shop" className="shop-navlinks">
           Shop
         </Link>

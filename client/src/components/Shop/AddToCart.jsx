@@ -80,7 +80,6 @@ export default function AddToCart({ item, handleClick, setThisQuantity }) {
   //////////////////////////////////////////////////////////
   function addNewItems() {
     item.quantity = quantity;
-
     async function addOrderItem() {
       const result = await postOrderItem(cart.id, item.id, item.quantity);
       setIsCounted(!isCounted);
@@ -126,6 +125,7 @@ export default function AddToCart({ item, handleClick, setThisQuantity }) {
 
     if (!cart.id) {
       addNewCart();
+      addNewItems();
       return;
     }
 
@@ -180,22 +180,7 @@ export default function AddToCart({ item, handleClick, setThisQuantity }) {
 
   return (
     <div>
-      {(pathname === "/shop" || pathname === `/shop/${category}`) && (
-        <Container>
-          <Row>
-            <Col md={{ span: 10, offset: 1 }}>
-              <form onSubmit={handleSubmit}>
-                <button>Quick Add</button>
-              </form>
-            </Col>
-          </Row>
-          <AddSuccessMessage
-            showModal={displayConfirmationModal}
-            hideModal={hideConfirmationModal}
-            item={item}
-          />
-        </Container>
-      )}
+      {(pathname === "/shop" || pathname === `/shop/${category}`) && <></>}
       {pathname === `/shop/items/${itemId}` && (
         <Container>
           <Row>
@@ -206,7 +191,7 @@ export default function AddToCart({ item, handleClick, setThisQuantity }) {
                   <input
                     type="number"
                     max="100"
-                    min="0"
+                    min="1"
                     value={quantity}
                     onChange={(e) => {
                       setQuantity(Number(e.target.value));
@@ -215,7 +200,9 @@ export default function AddToCart({ item, handleClick, setThisQuantity }) {
                 </label>
 
                 <span>
-                  <button className="addtocart">Add To Cart</button>
+                  <button className="addtocart bg-[#E15546]">
+                    Add To Cart
+                  </button>
                 </span>
               </form>
             </Col>

@@ -44,7 +44,7 @@ export default function Imageslider() {
             }}
           >
             {id === pic && (
-              <img src={slide.image} key={id} alt="comfy" className="image" />
+              <img src={slide.image} key={id} alt="image" className="image" />
             )}
           </div>
         );

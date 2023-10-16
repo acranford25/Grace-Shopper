@@ -4,11 +4,11 @@ import { fetchImageByItemId } from "../api/assets";
 //may add a admin function to make it changeable.
 export async function buildSlideshow() {
   const collection = [];
-  let initialSeed = 9;
+  let initialSeed = 8;
   for (let i = 1; i <= initialSeed; i++) {
     const img = await fetchImageByItemId(i);
 
-    collection.push(img[0]);
+    collection.push(img[1]);
   }
 
   return collection;
