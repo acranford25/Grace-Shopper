@@ -27,7 +27,7 @@ export default function Shop({ categoryItems }) {
 
   return (
     <m.div
-      className="tw-container tw-grid tw-grid-cols-4 tw-grid-rows-4 tw-gap-4"
+      className="tw-container tw-grid tw-grid-cols-4 tw-grid-rows-4 tw-gap-4 tw-pt-10 tw-pl-8"
       id="items-shop"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
