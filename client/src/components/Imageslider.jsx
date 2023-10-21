@@ -61,32 +61,46 @@ export default function Imageslider() {
     <figure className="slider">
       <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide} />
       <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} />
-      <div className="tw-flex tw-flex-row">
+      <div className="tw-flex tw-flex-row tw-py-6">
         <div
+          className="tw-p-6"
           style={{ cursor: "pointer" }}
           onClick={() => {
             nav(`/shop/items/${sliderData[0].itemid}`);
           }}
         >
-          <img src={firstImage} alt="image" className="image" />
+          <img
+            src={firstImage}
+            alt="image"
+            className="image hover:tw-shadow-2xl"
+          />
         </div>
 
         <div
-          className={"slide active"}
+          className="slide active tw-p-6"
           style={{ cursor: "pointer" }}
           onClick={() => {
             nav(`/shop/items/${sliderData[1].itemid}`);
           }}
         >
-          <img src={secondImage} alt="image" className="image" />
+          <img
+            src={secondImage}
+            alt="image"
+            className="image hover:tw-shadow-2xl"
+          />
         </div>
         <div
+          className="tw-p-6"
           style={{ cursor: "pointer" }}
           onClick={() => {
             nav(`/shop/items/${sliderData[2].itemid}`);
           }}
         >
-          <img src={thirdImage} alt="image" className="image" />
+          <img
+            src={thirdImage}
+            alt="image"
+            className="image hover:tw-shadow-2xl"
+          />
         </div>
       </div>
     </figure>

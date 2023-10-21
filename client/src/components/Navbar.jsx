@@ -37,7 +37,7 @@ export default function Navbar() {
   }, [isCounted, cart]);
 
   return (
-    <div id="navbar" className="navbar tw-px-8">
+    <div id="navbar" className="navbar tw-px-6">
       <h2 id="nav-header">Vintage Modern Music</h2>
 
       <div className="navlinks tw-space-x-4">
