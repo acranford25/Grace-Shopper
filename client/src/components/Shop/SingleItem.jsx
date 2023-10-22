@@ -35,9 +35,9 @@ export default function SingleItem() {
   }, [setItem]);
 
   return (
-    <div className="tw-container tw-grid tw-grid-cols-4 tw-grid-rows-4 tw-gap-4 tw-pt-10 tw-pl-8">
+    <div className="tw-container tw-grid tw-grid-cols-4  tw-gap-4 tw-pt-10 tw-pl-8">
       <CategorySidebar />
-      <div className="container  tw-p-4 tw-m-4 tw-min-h-screen tw-col-span-3  tw-pl-8">
+      <div className="container  tw-p-4 tw-m-4 tw-col-span-3  tw-pl-8">
         <div className="card tw-bg-base-100 tw-shadow-xl tw-flex tw-flex-row">
           <div className="tw-flex">
             <div>
