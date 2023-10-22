@@ -12,9 +12,9 @@ export default function CategorySidebar() {
       <div className="tw-shadow-2xl tw-justify-evenly tw-bg-black tw-pt-6 tw-pl-6 tw-border-t-solid tw-border-t-6 tw-rounded-t-lg tw-rounded-bl-lg">
         <div className="tw-bg-[#EEAF9D] tw-pt-6 tw-pl-6 tw-border-solid tw-border-t-6 tw-border-r-1 tw-border-b-1 tw-rounded-t-lg tw-rounded-bl-lg">
           <div className="tw-bg-[#E15546] tw-pt-6 tw-pl-6 tw-border-t-2 tw-border-r-0 tw-border-b-0 tw-border-solid tw-rounded-t-lg tw-rounded-bl-lg tw-shadow-2xl">
-            <div className="tw-flex tw-flex-col tw-bg-[#E7DCC9] tw-justify-evenly tw-py-6 tw-border-t-2 tw-border-r-0 tw-border-b-0 tw-border-solid tw-rounded-t-md tw-rounded-bl-md tw-shadow-xl">
+            <div className="tw-flex tw-flex-col tw-bg-[#E7DCC9] tw-justify-evenly tw-py-2 tw-border-t-2 tw-border-r-0 tw-border-b-0 tw-border-solid tw-rounded-t-md tw-rounded-bl-md tw-shadow-xl">
               <Link
-                className="sidebar-links text-black tw-m-1 tw-py-8"
+                className="card tw-bg-[#E7DCC9] tw-no-underline text-black tw-m-1 tw-py-8 hover:tw-shadow-lg"
                 to={`/shop`}
               >
                 All
@@ -22,7 +22,7 @@ export default function CategorySidebar() {
               {categories.map((category) => {
                 return (
                   <Link
-                    className="sidebar-links text-black tw-m-1 tw-py-8 tw-border-solid tw-border-b-0 tw-border-l-0 tw-border-r-0"
+                    className="card text-black tw-bg-[#E7DCC9] tw-no-underline tw-m-1 tw-py-8 hover:tw-shadow-lg"
                     key={category.id}
                     to={`/shop/${category.name}`}
                   >
