@@ -9,7 +9,10 @@ export default function Items({ items }) {
     <div className="tw-col-span-3 tw-grid tw-grid-cols-3 tw-gap-4 tw-pl-8">
       {items.map((item) => {
         return (
-          <div key={item.id} className="card tw-col-span-1 m-4 p-2">
+          <div
+            key={item.id}
+            className="card tw-col-span-1 m-4 p-2 tw-shadow-sm"
+          >
             <ItemRow item={item} />
             <Link to={`/shop/items/${item.id}`}>
               <button type="button" className="text-white tw-bg-[#E15546]">
