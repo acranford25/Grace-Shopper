@@ -39,8 +39,6 @@ export default function Imageslider() {
     sliderData.unshift(lastPic);
     setSliderData(sliderData);
     setPic(pic + 1);
-    console.log("nextSlide: ", sliderData);
-    console.log("pic: ", pic);
   };
 
   // const prevSlide = () => {
@@ -59,9 +57,15 @@ export default function Imageslider() {
 
   return (
     <figure className="slider">
-      <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide} />
-      <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} />
-      <div className="tw-flex tw-flex-row tw-py-6">
+      <FaArrowAltCircleLeft
+        className="left-arrow hover:tw-text-slate-500"
+        onClick={nextSlide}
+      />
+      <FaArrowAltCircleRight
+        className="right-arrow hover:tw-text-slate-500"
+        onClick={prevSlide}
+      />
+      <div className="tw-flex tw-flex-row tw-py-4">
         <div
           className="tw-p-6"
           style={{ cursor: "pointer" }}
@@ -72,12 +76,12 @@ export default function Imageslider() {
           <img
             src={firstImage}
             alt="image"
-            className="image hover:tw-shadow-2xl"
+            className="image tw-transition tw-delay-300 tw-ease-in-out tw-duration-300 hover:tw-shadow-2xl"
           />
         </div>
 
         <div
-          className="slide active tw-p-6"
+          className="tw-p-6"
           style={{ cursor: "pointer" }}
           onClick={() => {
             nav(`/shop/items/${sliderData[1].itemid}`);
@@ -99,7 +103,7 @@ export default function Imageslider() {
           <img
             src={thirdImage}
             alt="image"
-            className="image hover:tw-shadow-2xl"
+            className="image tw-duration-200 tw-ease-linear hover:tw-shadow-2xl"
           />
         </div>
       </div>
