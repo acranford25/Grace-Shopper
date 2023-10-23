@@ -26,7 +26,7 @@ export default function SingleItemThumbnails({ images, item }) {
     <div className="lg:tw-grid lg:tw-grid-cols-2 lg:tw-items-start lg:tw-gap-x-8 tw-p-4">
       <div className="tw-flex tw-flex-row">
         <div className="tw-place-self-center">
-          {picCounter > 0 ? (
+          {selectedIndex > 0 ? (
             <FaArrowAltCircleLeft className="tw-text-5xl" onClick={prevPic} />
           ) : (
             <div className="tw-p-6"></div>
@@ -86,7 +86,7 @@ export default function SingleItemThumbnails({ images, item }) {
           </Tab.Panels>
         </Tab.Group>
         <div className="tw-place-self-center">
-          {picCounter < images.length - 1 ? (
+          {selectedIndex < images.length - 1 ? (
             <FaArrowAltCircleRight className="tw-text-5xl" onClick={nextPic} />
           ) : (
             <div className="tw-p-6"></div>
