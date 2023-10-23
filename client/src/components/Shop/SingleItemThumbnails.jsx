@@ -27,7 +27,10 @@ export default function SingleItemThumbnails({ images, item }) {
       <div className="tw-flex tw-flex-row">
         <div className="tw-place-self-center">
           {selectedIndex > 0 ? (
-            <FaArrowAltCircleLeft className="tw-text-5xl" onClick={prevPic} />
+            <FaArrowAltCircleLeft
+              className="tw-text-5xl tw-cursor-pointer hover:tw-text-slate-500"
+              onClick={prevPic}
+            />
           ) : (
             <div className="tw-p-6"></div>
           )}
@@ -38,6 +41,7 @@ export default function SingleItemThumbnails({ images, item }) {
           selectedIndex={selectedIndex}
           onChange={(index) => {
             setSelectedIndex(index);
+            setPicCounter(index);
           }}
         >
           <div className="tw-mx-auto tw-mt-6 tw-hidden tw-w-full tw-max-w-2xl sm:tw-block lg:tw-max-w-none">
@@ -87,7 +91,10 @@ export default function SingleItemThumbnails({ images, item }) {
         </Tab.Group>
         <div className="tw-place-self-center">
           {selectedIndex < images.length - 1 ? (
-            <FaArrowAltCircleRight className="tw-text-5xl" onClick={nextPic} />
+            <FaArrowAltCircleRight
+              className="tw-text-5xl hover:tw-text-slate-500 tw-cursor-pointer"
+              onClick={nextPic}
+            />
           ) : (
             <div className="tw-p-6"></div>
           )}
