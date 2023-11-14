@@ -11,11 +11,14 @@ export default function Items({ items }) {
         return (
           <div
             key={item.id}
-            className="card tw-col-span-1 m-4 p-2 tw-shadow-sm"
+            className="card tw-col-span-1 m-4 p-2 tw-shadow-layered_modern"
           >
             <ItemRow item={item} />
             <Link to={`/shop/items/${item.id}`}>
-              <button type="button" className="text-white tw-bg-[#E15546]">
+              <button
+                type="button"
+                className="text-white tw-bg-[#E15546] tw-w-full tw-shadow-layered_modern"
+              >
                 Buy Now
               </button>
             </Link>
