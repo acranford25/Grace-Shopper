@@ -126,7 +126,7 @@ const images = [
     itemId: 3,
   },
   {
-    image: `https://res.cloudinary.com/doh7njipk/image/upload/c_thumb,w_200,g_face/v1696104007/amps/fender_amp1_ssklfb.jpg`,
+    image: `https://res.cloudinary.com/doh7njipk/image/upload/v1696104007/amps/fender_amp1_ssklfb.jpg`,
     itemId: 3,
   },
   {
