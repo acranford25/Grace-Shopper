@@ -19,7 +19,7 @@ export default function Home() {
       <figure>
         <Imageslider />
       </figure>
-      <div className="home-description">
+      <div>
         <br></br>
         {loggedIn === false || user.isGuest ? (
           <Link to="/login">

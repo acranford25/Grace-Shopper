@@ -206,9 +206,6 @@ h3:after {
 }
 
 .image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 460px;
   height: 500px;
   border-radius: 10px;
