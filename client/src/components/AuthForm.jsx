@@ -147,11 +147,17 @@ export default function AuthForm() {
         <br></br>
         {pathname === "/register" ? (
           <p>
-            Already have an account? <Link to="/login">Login Here</Link>
+            Already have an account?{" "}
+            <Link className="tw-text-blue-600" to="/login">
+              Login Here
+            </Link>
           </p>
         ) : (
           <p>
-            Don't have an account? <Link to="/register">Register Here</Link>
+            Don't have an account?{" "}
+            <Link className="tw-text-blue-600" to="/register">
+              Register Here
+            </Link>
           </p>
         )}
       </form>

@@ -17,7 +17,7 @@ export default function Items({ items }) {
             <Link to={`/shop/items/${item.id}`}>
               <button
                 type="button"
-                className="text-white tw-bg-[#E15546] tw-w-full tw-shadow-layered_modern"
+                className="text-white tw-bg-black tw-shadow-layered_modern"
               >
                 Buy Now
               </button>
