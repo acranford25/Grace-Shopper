@@ -11,7 +11,7 @@ export default function Items({ items }) {
         return (
           <div
             key={item.id}
-            className="card tw-col-span-1 m-4 p-2 tw-shadow-layered_modern"
+            className="card tw-col-span-1 tw-h-[26rem] m-4 p-2 tw-shadow-layered_modern"
           >
             <ItemRow item={item} />
             <Link to={`/shop/items/${item.id}`}>
