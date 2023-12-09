@@ -16,6 +16,7 @@ export default function Imageslider() {
     async function getUrls() {
       const urlArr = await buildSlideshow();
       setImages(urlArr);
+      console.log("urlArr: ", urlArr);
     }
     getUrls();
   }, []);
