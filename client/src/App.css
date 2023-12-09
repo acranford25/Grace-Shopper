@@ -58,16 +58,16 @@ html {
 } */
 
 h1 {
-  font-family: "Six Caps", Sans-serif;
   text-transform: uppercase;
-  font-weight: 400;
-  font-size: 40em;
-  text-shadow: 1px 2px #eae4cc, 1px 2px #e15546;
+  font-weight: 800;
+  font-size: 40px;
+  /* text-shadow: 1px 2px #eae4cc, 1px 2px #e15546; */
 }
 
 h1 span {
   display: inline-block;
   vertical-align: middle;
+  padding-top: 20px;
 }
 
 h3 {
