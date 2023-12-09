@@ -5,6 +5,7 @@ import useCart from "../../hooks/useCart";
 import AddToCart from "../Shop/AddToCart";
 import RemoveCartItem from "../Shop/RemoveCartItem";
 import { fetchMyCart } from "../../api/auth";
+import { fetchImageByItemId } from "../../api/assets";
 import { Row, Col, Container, Card } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useNavigate } from "react-router-dom";
@@ -26,6 +27,7 @@ export default function Cart() {
     async function setCartItems() {
       const result = await fetchMyCart();
       if (result.success) {
+        console.log("result: ", result);
         setCart(result.order);
         return;
       } else {
@@ -66,17 +68,23 @@ export default function Cart() {
 
   return (
     <div className="cart">
-      <Container>
-        <h1>Cart</h1>
-        <h2> Total Price: $ {cart.totalPrice ? cart.totalPrice : 0}</h2>
-        <div>
+      <Container className="tw-grid tw-grid-cols-3 tw-gap-4">
+        <div className="card tw-p-6 tw-m-6 tw-w-96 tw-shadow-layered_modern tw-col-start-2">
+          <h1>Cart</h1>
+          <h2> Total Price: $ {cart.totalPrice ? cart.totalPrice : 0}</h2>
+        </div>
+        <div className="tw-col-start-2">
           <Row>
             <Card className="scroll">
               <Col md={{ span: 10, offset: 2 }}>
                 {cart.items &&
                   cart.items.map((item) => {
+                    console.log("item: ", item);
                     return (
                       <div key={item.id} className="item-card">
+                        <div>
+                          <img src={item.image} alt="imageNotFound" />
+                        </div>
                         <p>Item: {item.name}</p>
                         <p>Price: ${item.cost}</p>
                         <p>Subtotal: ${item.cost * item.quantity}</p>
@@ -93,7 +101,7 @@ export default function Cart() {
             </Card>
           </Row>
         </div>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="tw-col-start-2">
           <button>Complete Order</button>
         </form>
       </Container>
