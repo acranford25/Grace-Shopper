@@ -148,7 +148,8 @@ async function getUsersLastOrder(userId) {
                         'category', itms.category,
                         'isAvailable', itms."isAvailable",
                         'quantity', orditms.item_quantity,
-                        'order_item_id', orditms.id
+                        'order_item_id', orditms.id,
+                        'image', it_imgs.image
                     )
                 ) END AS items
                 FROM orders ords
@@ -156,10 +157,12 @@ async function getUsersLastOrder(userId) {
                     ON ords.id = orditms."orderId"
                 FULL OUTER JOIN items itms
                     ON orditms."itemId" = itms.id
+                INNER JOIN items_imgs it_imgs
+                    ON itms.id = it_imgs.item_id
                 JOIN users us
                     ON us.id = ords."userId"
                 WHERE us.id = $1
-                GROUP BY ords.id, orditms."orderId"
+                GROUP BY ords.id, orditms."orderId", itms.id, it_imgs.id
                 ORDER BY ords.order_date desc
                 LIMIT 1;`,
       [userId]
