@@ -5,11 +5,11 @@ async function createImage(imgObj) {
   try {
     const { rows: image } = await client.query(
       `
-        INSERT INTO items_imgs(image,itemId)
+        INSERT INTO items_imgs(image,item_id)
         VALUES($1,$2)
         RETURNING*;
         `,
-      [imgObj.image, imgObj.itemId]
+      [imgObj.image, imgObj.item_id]
     );
 
     return image;
@@ -32,7 +32,7 @@ async function getImagesByItemId(itemId) {
   try {
     const { rows: image } = await client.query(
       `
-        SELECT * FROM items_imgs WHERE itemId = ($1);
+        SELECT * FROM items_imgs WHERE item_id = ($1);
         `,
       [itemId]
     );

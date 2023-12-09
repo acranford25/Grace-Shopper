@@ -33,7 +33,7 @@ async function getItemById(itemId) {
     FROM
       items itms
     LEFT JOIN
-      items_imgs it_imgs ON itms.id = it_imgs.itemId
+      items_imgs it_imgs ON itms.id = it_imgs.item_id
     LEFT JOIN
       reviews rvws ON itms.id = rvws.itemId
     LEFT JOIN
@@ -60,7 +60,7 @@ async function getItemsByCategory(itemCategory) {
   try {
     const { items } = await client.query(
       ` SELECT itms.id,itms.name,itms.description,itms.cost,itms.category,itms."isAvailable" , 
-      CASE WHEN it_imgs.itemId IS NULL THEN '[]'::json
+      CASE WHEN it_imgs.item_id IS NULL THEN '[]'::json
       ELSE
       JSON_AGG(
         JSON_BUILD_OBJECT(
@@ -70,9 +70,9 @@ async function getItemsByCategory(itemCategory) {
       )END AS imagereel
       FROM items itms
       JOIN items_imgs it_imgs 
-      ON itms.id = it_imgs.itemId
+      ON itms.id = it_imgs.item_id
       WHERE itms.category = $1
-      GROUP BY it_imgs.itemid,itms.id
+      GROUP BY it_imgs.item_id,itms.id
       ORDER BY itms.id;
         `,
       [itemCategory]
@@ -89,7 +89,7 @@ async function getItemsByCategory(itemCategory) {
 async function getAllItems() {
   try {
     const { rows } = await client.query(`
-    SELECT itms.id,itms.name,itms.description,itms.cost,itms.category,itms."isAvailable",itms.inventory_qty , CASE WHEN it_imgs.itemId IS NULL THEN '[]'::json
+    SELECT itms.id,itms.name,itms.description,itms.cost,itms.category,itms."isAvailable",itms.inventory_qty , CASE WHEN it_imgs.item_id IS NULL THEN '[]'::json
     ELSE
     JSON_AGG(
       JSON_BUILD_OBJECT(
@@ -99,8 +99,8 @@ async function getAllItems() {
     )END AS imagereel
     FROM items itms
     FULL OUTER JOIN items_imgs it_imgs 
-    ON itms.id = it_imgs.itemId
-    GROUP BY it_imgs.itemid,itms.id
+    ON itms.id = it_imgs.item_id
+    GROUP BY it_imgs.item_id,itms.id
     ORDER BY itms.id;`);
     return rows;
   } catch (error) {
@@ -112,7 +112,7 @@ async function getItemsByOrderId(orderId) {
   try {
     const { rows } = await client.query(
       `
-    SELECT itms.id, itms.name, itms.cost, orditms.item_quantity as quantity, itms."isAvailable", itms.inventory_qty
+    SELECT itms.id, itms.name, itms.cost, orditms.item_quantity as quantity, itms."isAvailable", itms.inventory_qty 
     FROM items itms
     FULL OUTER JOIN order_items orditms
     ON itms.id = orditms."itemId"
@@ -121,6 +121,9 @@ async function getItemsByOrderId(orderId) {
     ORDER BY orditms.id;`,
       [orderId]
     );
+    if (!rows) {
+      return null;
+    }
     return rows;
   } catch (error) {
     throw error;
