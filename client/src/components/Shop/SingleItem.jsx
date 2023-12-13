@@ -27,8 +27,6 @@ export default function SingleItem() {
           theseImages.push(result.item.images[i]);
         }
         setImages(theseImages);
-
-        console.log(result.item);
       }
       getItemById();
     }
