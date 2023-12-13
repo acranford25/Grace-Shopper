@@ -11,7 +11,7 @@ const { authRequired } = require("./utils");
 const { getItemById } = require("../db/adapters/items");
 
 order_itemsRouter.use((req, res, next) => {
-  console.log("A request is being made to activity_routines");
+  console.log("A request is being made to order_items");
   next();
 });
 
