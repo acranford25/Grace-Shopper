@@ -226,6 +226,7 @@ export default function AddToCart({ item, handleClick, setThisQuantity }) {
               value={item.quantity}
               onChange={handleChange}
               onClick={handleClick}
+              className="tw-w-10 tw-ml-2"
             />
           </label>
         </form>
