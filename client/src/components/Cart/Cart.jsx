@@ -27,7 +27,6 @@ export default function Cart() {
     async function setCartItems() {
       const result = await fetchMyCart();
       if (result.success) {
-        console.log("result: ", result);
         setCart(result.order);
         return;
       } else {
@@ -79,21 +78,29 @@ export default function Cart() {
               <Col md={{ span: 10, offset: 2 }}>
                 {cart.items &&
                   cart.items.map((item) => {
-                    console.log("item: ", item);
                     return (
-                      <div key={item.id} className="item-card">
+                      <div
+                        key={item.id}
+                        className="item-card tw-grid tw-gap-4 tw-grid-cols-2"
+                      >
                         <div>
-                          <img src={item.image} alt="imageNotFound" />
+                          <img
+                            src={item.image}
+                            alt="imageNotFound"
+                            className="tw-scale-75"
+                          />
                         </div>
-                        <p>Item: {item.name}</p>
-                        <p>Price: ${item.cost}</p>
-                        <p>Subtotal: ${item.cost * item.quantity}</p>
-                        <AddToCart
-                          item={item}
-                          handleClick={handleClick}
-                          setThisQuantity={setThisQuantity}
-                        />
-                        <RemoveCartItem item={item} />
+                        <div className="tw-p-4">
+                          <p>Item: {item.name}</p>
+                          <p>Price: ${item.cost}</p>
+                          <p>Subtotal: ${item.cost * item.quantity}</p>
+                          <AddToCart
+                            item={item}
+                            handleClick={handleClick}
+                            setThisQuantity={setThisQuantity}
+                          />
+                          <RemoveCartItem item={item} />
+                        </div>
                       </div>
                     );
                   })}
