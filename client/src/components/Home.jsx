@@ -9,7 +9,7 @@ export default function Home() {
   const { user, loggedIn } = useAuth();
   return (
     <div className="home-page">
-      <section class="text">
+      <section className="text">
         <h3></h3>
         <h1>
           <span>Vintage Modern Music</span>{" "}
