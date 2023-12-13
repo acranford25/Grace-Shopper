@@ -16,7 +16,6 @@ export default function Imageslider() {
     async function getUrls() {
       const urlArr = await buildSlideshow();
       setImages(urlArr);
-      console.log("urlArr: ", urlArr);
     }
     getUrls();
   }, []);
@@ -31,7 +30,7 @@ export default function Imageslider() {
 
   const nextSlide = () => {
     setSlidLeft(true);
-    isVisible(false);
+    setIsVisible(false);
   };
 
   const prevSlide = () => {
@@ -45,6 +44,13 @@ export default function Imageslider() {
     await setImages(images);
     await setSlidLeft(false);
     await setIsVisible(true);
+  }
+
+  function reset() {
+    setTimeout(() => {
+      (slidLeft ? moveLeft() : undefined) ||
+        (slidRight ? moveRight() : undefined);
+    }, [500]);
   }
 
   if (!Array.isArray(images) || images.length <= 0) {
@@ -64,10 +70,7 @@ export default function Imageslider() {
       />
       <div
         className="tw-flex tw-flex-row tw-py-4 tw-transition-all"
-        onChange={setTimeout(() => {
-          (slidLeft ? moveLeft() : undefined) ||
-            (slidRight ? moveRight() : undefined);
-        }, [500])}
+        onChange={reset()}
       >
         {images.map((image, id) => {
           const endItem = [
