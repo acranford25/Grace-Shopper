@@ -215,7 +215,10 @@ authRouter.get("/myCart", authRequired, async (req, res, next) => {
       if (items) {
         order.items === items;
       }
-      res.cookie("order", order);
+      res.cookie("order", order, {
+        sameSite: "strict",
+        httpOnly: true,
+      });
       res.send({
         success: true,
         message: "Here's your cart",
